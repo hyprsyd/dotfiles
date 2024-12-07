@@ -515,11 +515,16 @@ require('lazy').setup({
         jqls ={},
         pylsp = {
          settings = {
-            plugins = {
-                -- formatter options
+            pylsp = {
+              plugins = {
                 black = { enabled = true },
                 autopep8 = { enabled = false },
-        },
+                yapf = { enabled = false},
+                rope_autoimport = {
+                  enabled = true,
+                },
+              },
+            },
         },
         },
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -601,7 +606,7 @@ require('lazy').setup({
       formatters_by_ft = {
         lua = { 'stylua' },
         -- Conform can also run multiple formatters sequentially
-        python = { 'pyink' },
+        python = { 'black' },
         --
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
