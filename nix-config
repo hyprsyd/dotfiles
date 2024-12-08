@@ -101,10 +101,11 @@ nixpkgs.config.allowUnfree = true;
        tree
        gh
      ];
-  # xdg.configFile."nvim".source = /home/sid/hyprland/nvim.config;
+  # xdg.configFile."nvim".source = /home/sid/hyprland/nvim;
   # xdg.configFile."hypr".source = /home/sid/hyprland/hypr;
   # xdg.configFile."waybar".source = /home/sid/hyprland/waybar;
   # xdg.configFile."dunst".source = /home/sid/hyprland/dunst;
+  # xdg.configFile."gruvbox_astro.jpg".source = /home/sid/hyprland/gruvbox_astro.jpg;
   home.file.".gdbinit".text = ''
       set auto-load safe-path /nix/store
   '';
